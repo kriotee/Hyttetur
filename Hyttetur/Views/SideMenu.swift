@@ -5,13 +5,6 @@
 //  Created by Kristin Ottesen-Næss on 02/10/2025.
 //
 
-//
-//  SideMenuView.swift
-//  Hyttetur
-//
-//  Created by Kristin Ottesen-Næss on 02/10/2025.
-//
-
 import SwiftUI
 
 struct SideMenu: View {
@@ -20,7 +13,7 @@ struct SideMenu: View {
     
     var body: some View {
         ZStack(alignment: .trailing){
-            Color.black.opacity(showMenu ? 0.3 : 0)
+            Color.black.opacity(showMenu ? 0.0 : 0)
                 .ignoresSafeArea()
                 .onTapGesture {
                     withAnimation {
@@ -38,7 +31,7 @@ struct SideMenu: View {
                         Image(systemName: "xmark")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 40, height: 40)
+                            .frame(width: 30, height: 30)
                             .padding(.trailing, 32)
                             .foregroundColor(Color(hex: "FD68B7"))
                     }
@@ -70,7 +63,7 @@ struct SideMenu: View {
                 Spacer()
             }
             .padding()
-            .frame(width: 240, alignment: .leading)
+            .frame(width: 340, alignment: .leading)
             .background(Color(hex: "#FE9ACF"))
             .offset(x: showMenu ? 0 : -240)
             .animation(.easeInOut, value: showMenu)

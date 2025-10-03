@@ -10,6 +10,6 @@ import Foundation
 struct FaqItem: Identifiable {
     let id = UUID()
     let emoji: String
-    let questtion: String
+    let question: String
     let answer: String
 }
